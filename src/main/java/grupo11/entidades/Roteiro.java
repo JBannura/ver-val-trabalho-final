@@ -16,9 +16,9 @@ public class Roteiro {
     private void determinaBairrosPercorridos(Reta rota,Collection<Bairro> todosBairros){
         for(Bairro bairro:todosBairros){
             SituacaoReta sr = bairro.getArea().classifica(rota);
-            //System.out.println("Bairro: " + bairro.getNome());
             if (sr != SituacaoReta.TODA_FORA){
-                System.out.println("Bairro que Intersecciona: " + bairro.getNome());
+                // DEBUG
+                //System.out.println("Bairro que Intersecciona: " + bairro.getNome());
                 bairrosPercorridos.add(bairro);
             }
         }
