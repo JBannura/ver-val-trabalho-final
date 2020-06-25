@@ -15,21 +15,30 @@ public class App {
     public static void main(String args[]){
     
         RepositorioBairrosImplMem rb = new RepositorioBairrosImplMem();
-        // RepositorioPassageirosImplMem rp = new RepositorioPassageirosImplMem();
-        // CalculoCustoViagemBasico ccv = new CalculoCustoViagemBasico();
+        RepositorioPassageirosImplMem rp = new RepositorioPassageirosImplMem();
+        CalculoCustoViagemBasico ccv = new CalculoCustoViagemBasico();
         
+        Bairro expected = rb.recuperaPorNome("Petropolis");
+        Bairro actual = expected.novoBairroQuadrado("Petropolis", new Ponto(0,12), 4, 10.0);
+
+        Ponto p1 = new Ponto(0,2);
+        Ponto p2 = new Ponto(1,5);
+        Reta r = new Reta(p1,p2);
+        System.out.println(r.tamanho());
+
+
         // ServicosPassageiro sp = new ServicosPassageiro(rb, rp, ccv);
-        // Roteiro r = sp.criaRoteiro("Petropolis", "Solidao");
-        // Viagem v = sp.criaViagem(1, sp.criaRoteiro("Petropolis", "Solidao"), "123456789");
+        // Roteiro r = sp.criaRoteiro("Gavea", "Bom Fim");
+        // Viagem v = sp.criaViagem(1, sp.criaRoteiro("Ipiranga", "Bom Fim"), "123456789");
         // System.out.println(v.toString());
         
         
-        System.out.println("Area: " + rb.recuperaPorNome("Ipiranga").getArea());
-        System.out.println("Ponto central: " + rb.recuperaPorNome("Ipiranga").getArea().pontoCentral());
-        System.out.println("Area: " + rb.recuperaPorNome("Solidao").getArea());
-        System.out.println("Ponto central: " + rb.recuperaPorNome("Solidao").getArea().pontoCentral());
-        System.out.println("Area: " + rb.recuperaPorNome("Gavea").getArea());
-        System.out.println("Ponto central: " + rb.recuperaPorNome("Gavea").getArea().pontoCentral());
+        // System.out.println("Area: " + rb.recuperaPorNome("Ipiranga").getArea());
+        // System.out.println("Ponto central: " + rb.recuperaPorNome("Ipiranga").getArea().pontoCentral());
+        // System.out.println("Area: " + rb.recuperaPorNome("Solidao").getArea());
+        // System.out.println("Ponto central: " + rb.recuperaPorNome("Solidao").getArea().pontoCentral());
+        // System.out.println("Area: " + rb.recuperaPorNome("Gavea").getArea());
+        // System.out.println("Ponto central: " + rb.recuperaPorNome("Gavea").getArea().pontoCentral());
 
         // Roteiro r = new Roteiro(rb.recuperaPorNome("Solidao"), rb.recuperaPorNome("Ipiranga"), rb.recuperaListaBairros());
         // CalculoCustoViagemBasico ccv = new CalculoCustoViagemBasico();
