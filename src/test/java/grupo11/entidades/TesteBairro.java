@@ -1,9 +1,10 @@
-package grupo11;
+package grupo11.entidades;
 
-import grupo11.entidades.Bairro;
+// Classes
 import grupo11.interfaces.Persistencia.RepositorioBairrosImplMem; 
 import grupo11.entidades.geometria.Ponto;
 
+// Teste
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
