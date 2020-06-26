@@ -11,14 +11,12 @@ public class Roteiro {
     private Bairro bairroOrigem;
     private Bairro bairroDestino;
     private Reta rota;
-    private ArrayList<Bairro> bairrosPercorridos = new ArrayList<>();
+    private Collection<Bairro> bairrosPercorridos = new ArrayList<>();
 
     private void determinaBairrosPercorridos(Reta rota,Collection<Bairro> todosBairros){
         for(Bairro bairro:todosBairros){
             SituacaoReta sr = bairro.getArea().classifica(rota);
             if (sr != SituacaoReta.TODA_FORA){
-                // DEBUG
-                //System.out.println("Bairro que Intersecciona: " + bairro.getNome());
                 bairrosPercorridos.add(bairro);
             }
         }
