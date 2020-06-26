@@ -1,9 +1,5 @@
 package grupo11.entidades.geometria;
 
-// Classes
-import grupo11.entidades.geometria.Reta;
-import grupo11.entidades.geometria.Ponto;
-
 // Teste
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -19,7 +15,5 @@ public class TesteReta {
         double expected = 5;
 
         Assertions.assertEquals(expected, actual.tamanho());
-
     }
-
 }
