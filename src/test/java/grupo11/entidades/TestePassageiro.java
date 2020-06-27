@@ -10,12 +10,11 @@ import org.junit.jupiter.api.Test;
 public class TestePassageiro {
 
     RepositorioPassageirosImplMem rp = new RepositorioPassageirosImplMem();
-    Passageiro p = rp.recuperaPorCPF("123456789");
 
     @Test
     public void testeGetPontuacaoMedia(){
         Passageiro expected = rp.recuperaPorCPF("123456789");
-        Passageiro actual = p.novoPassageiro("123456789", "Ze");
+        Passageiro actual = Passageiro.novoPassageiro("123456789", "Ze");
 
         Assertions.assertEquals(expected.getPontuacaoMedia(), actual.getPontuacaoMedia());
     }
@@ -23,9 +22,9 @@ public class TestePassageiro {
     @Test
     public void testeInfoPontuacao(){
         Passageiro expected = rp.recuperaPorCPF("123456789");
-        expected = expected.passageiroExistente("123456789", "Ze", 16, 2);
+        expected = Passageiro.passageiroExistente("123456789", "Ze", 16, 2);
 
-        Passageiro actual = p.novoPassageiro("123456789", "Ze");
+        Passageiro actual = Passageiro.novoPassageiro("123456789", "Ze");
         actual.infoPontuacao(8);
         
         Assertions.assertEquals(expected.getPontuacaoMedia(), actual.getPontuacaoMedia());

@@ -11,12 +11,11 @@ import org.junit.jupiter.api.Test;
 public class TesteBairro{
     
     RepositorioBairrosImplMem rb = new RepositorioBairrosImplMem();
-    Bairro b1 = rb.recuperaPorNome("Ipiranga");
     
     @Test
     public void testaNovoBairroQuadradoArea(){
         Bairro expected = rb.recuperaPorNome("Petropolis");
-        Bairro actual = b1.novoBairroQuadrado("Petropolis", new Ponto(0,12), 4, 10.0);
+        Bairro actual = Bairro.novoBairroQuadrado("Petropolis", new Ponto(0, 12), 4, 10.0);
         
         Assertions.assertEquals(expected.getArea().getPSupEsq().getX(), actual.getArea().getPSupEsq().getX());
         Assertions.assertEquals(expected.getArea().getPSupEsq().getY(), actual.getArea().getPSupEsq().getY());
@@ -28,7 +27,7 @@ public class TesteBairro{
     @Test
     public void testaNovoBairroQuadradoNome(){
         Bairro expected = rb.recuperaPorNome("Petropolis");
-        Bairro actual = b1.novoBairroQuadrado("Petropolis", new Ponto(0,12), 4, 10.0);
+        Bairro actual = Bairro.novoBairroQuadrado("Petropolis", new Ponto(0, 12), 4, 10.0);
         
         Assertions.assertEquals(expected.getNome(), actual.getNome());
     }
@@ -36,7 +35,7 @@ public class TesteBairro{
     @Test
     public void testaNovoBairroQuadradoCustoTransporte(){
         Bairro expected = rb.recuperaPorNome("Petropolis");
-        Bairro actual = b1.novoBairroQuadrado("Petropolis", new Ponto(0,12), 4, 10.0);
+        Bairro actual = Bairro.novoBairroQuadrado("Petropolis", new Ponto(0, 12), 4, 10.0);
         
         Assertions.assertEquals(expected.getCustoTransporte(), actual.getCustoTransporte());
     }
@@ -44,7 +43,7 @@ public class TesteBairro{
     @Test
     public void testaNovoBairroRetangularArea(){
         Bairro expected = rb.recuperaPorNome("Ipiranga");
-        Bairro actual = b1.novoBairroRetangular("Ipiranga", new Ponto(4, 10), 4, 2, 6);
+        Bairro actual = Bairro.novoBairroRetangular("Ipiranga", new Ponto(4, 10), 4, 2, 6);
 
         Assertions.assertEquals(expected.getArea().getPSupEsq().getX(), actual.getArea().getPSupEsq().getX());
         Assertions.assertEquals(expected.getArea().getPSupEsq().getY(), actual.getArea().getPSupEsq().getY());
@@ -55,7 +54,7 @@ public class TesteBairro{
     @Test
     public void testaNovoBairroRetangularNome(){
         Bairro expected = rb.recuperaPorNome("Ipiranga");
-        Bairro actual = b1.novoBairroRetangular("Ipiranga", new Ponto(4, 10), 4, 2, 6);
+        Bairro actual = Bairro.novoBairroRetangular("Ipiranga", new Ponto(4, 10), 4, 2, 6);
 
         Assertions.assertEquals(expected.getNome(), actual.getNome());
     }
@@ -63,7 +62,7 @@ public class TesteBairro{
     @Test
     public void testaNovoBairroRetangularCustoTransporte(){
         Bairro expected = rb.recuperaPorNome("Ipiranga");
-        Bairro actual = b1.novoBairroRetangular("Ipiranga", new Ponto(4, 10), 4, 2, 6);
+        Bairro actual = Bairro.novoBairroRetangular("Ipiranga", new Ponto(4, 10), 4, 2, 6);
 
         Assertions.assertEquals(expected.getCustoTransporte(), actual.getCustoTransporte());
     }
