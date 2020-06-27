@@ -1,4 +1,4 @@
-package grupo11.entidades.casosDeUso;
+package grupo11.casosDeUso;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

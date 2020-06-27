@@ -2,7 +2,6 @@ package grupo11.entidades;
 
 // Classes
 import grupo11.interfaces.Persistencia.RepositorioPassageirosImplMem;
-import grupo11.entidades.Passageiro;
 
 // Teste
 import org.junit.jupiter.api.Assertions;
